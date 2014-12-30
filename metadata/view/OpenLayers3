@@ -1,0 +1,135 @@
+{
+    "type": "Ext.Component",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "openlayers3",
+        "designer|userClassName": "OpenLayers3",
+        "html": [
+            "\"<div id=\"map\"></div>\""
+        ],
+        "layers": [
+            "[]"
+        ],
+        "view": [
+            "{}"
+        ]
+    },
+    "name": "MyComponent",
+    "configAlternates": {
+        "view": "object",
+        "layers": "array"
+    },
+    "designerId": "729f8b1c-1a3e-47c0-8d64-bc4d786aa048",
+    "customConfigs": [
+        {
+            "group": "(Custom Properties)",
+            "name": "layers",
+            "type": "string"
+        },
+        {
+            "group": "(Custom Properties)",
+            "name": "view",
+            "type": "string"
+        }
+    ],
+    "cn": [
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMapAfterRender",
+                "implHandler": [
+                    "var me = this;",
+                    "",
+                    "this.map = new ol.Map({",
+                    "    target: 'map',",
+                    "    renderer: 'canvas',",
+                    "    layers: me.layers,",
+                    "    view : new ol.View(me.view)",
+                    "});"
+                ],
+                "name": "afterrender",
+                "scope": "me"
+            },
+            "name": "onMapAfterRender",
+            "designerId": "274b5fc7-68c8-4566-8147-5ce7e7062ffc"
+        },
+        {
+            "type": "processcfgfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "config"
+                ],
+                "fn": "processOpenLayers3",
+                "implHandler": [
+                    "//set default view",
+                    "Ext.applyIf(config.view, {",
+                    "    projection: 'EPSG:3857',",
+                    "    center: ol.proj.transform([-100, 40.00], 'EPSG:4326', 'EPSG:3857'),",
+                    "    zoom: 5,",
+                    "    minZoom: 0,",
+                    "    maxZoom: 16",
+                    "});",
+                    "",
+                    "//set default base layer OSM",
+                    "Ext.applyIf(config.layers, [",
+                    "    new ol.layer.Tile({",
+                    "        source: new ol.source.OSM()",
+                    "    })",
+                    "]);",
+                    ""
+                ]
+            },
+            "name": "processOpenLayers3",
+            "designerId": "7e1ec38f-93df-4016-8594-8a3cb5851947"
+        },
+        {
+            "type": "basiceventbinding",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "onMapResize",
+                "implHandler": [
+                    "if(this.map)",
+                    "    this.map.setSize([width, height]);"
+                ],
+                "name": "resize",
+                "scope": "me"
+            },
+            "name": "onMapResize",
+            "designerId": "d40ea1e1-70d7-4be7-80dc-d23a93be7b89"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "fn": "getMap",
+                "implHandler": [
+                    "return this.map;"
+                ]
+            },
+            "name": "getMap",
+            "designerId": "aa18061e-2e75-4672-a8e3-6764a7f7b986"
+        }
+    ]
+}

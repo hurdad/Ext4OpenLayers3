@@ -1,0 +1,55 @@
+{
+    "name": "Ext4OpenLayers3",
+    "settings": {
+        "cmd": {
+            "license": "",
+            "cmdVersion": "",
+            "frameworkVersion": ""
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "http://10.10.0.202/Ext4OpenLayers3/",
+        "exportPath": "/Volumes/10.10.0.202/Ext4OpenLayers3",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "projectHasEnabledWebServer": false,
+        "lockUrlPrefix": false,
+        "installStatus": "Not Installed",
+        "displayfield-ExtBox1-1224-inputEl": "a new version of the framework is available",
+        "displayfield-ExtBox1-1279-inputEl": "a new version of the framework is available"
+    },
+    "xdsVersion": "3.1.0",
+    "xdsBuild": 1943,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000007,
+    "framework": "ext42",
+    "viewOrderMap": {
+        "view": [
+            "ccf11f1b-c72a-44fc-9803-344ace6f3349",
+            "729f8b1c-1a3e-47c0-8d64-bc4d786aa048"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "ed1b2218-96e3-4f67-afee-45be463f92e9",
+            "e58384f6-ccd7-493b-b33e-cd283e544641",
+            "e0072a0f-930f-4ba4-af8c-f46dcf10b25b",
+            "3d053b43-fb40-4b91-8c80-8d3ebb306466"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

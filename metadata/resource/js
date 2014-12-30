@@ -1,0 +1,15 @@
+{
+    "type": "jsresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "js",
+        "url": "ol.js",
+        "x-compile": true
+    },
+    "name": "js",
+    "designerId": "e0072a0f-930f-4ba4-af8c-f46dcf10b25b"
+}

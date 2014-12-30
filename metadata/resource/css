@@ -1,0 +1,14 @@
+{
+    "type": "cssresource",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "css",
+        "url": "ol.css"
+    },
+    "name": "css",
+    "designerId": "3d053b43-fb40-4b91-8c80-8d3ebb306466"
+}
