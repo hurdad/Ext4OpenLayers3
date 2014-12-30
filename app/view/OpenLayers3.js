@@ -46,6 +46,7 @@ Ext.define('Ext4OpenLayers3.view.OpenLayers3', {
     },
 
     processOpenLayers3: function(config) {
+
         //set default view
         Ext.applyIf(config.view, {
             projection: 'EPSG:3857',
@@ -67,6 +68,7 @@ Ext.define('Ext4OpenLayers3.view.OpenLayers3', {
     onMapAfterRender: function(component, eOpts) {
         var me = this;
 
+        //render map
         this.map = new ol.Map({
             target: 'map',
             renderer: 'canvas',

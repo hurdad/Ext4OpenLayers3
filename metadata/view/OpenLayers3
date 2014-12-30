@@ -49,6 +49,7 @@
                 "implHandler": [
                     "var me = this;",
                     "",
+                    "//render map",
                     "this.map = new ol.Map({",
                     "    target: 'map',",
                     "    renderer: 'canvas',",
@@ -75,6 +76,7 @@
                 ],
                 "fn": "processOpenLayers3",
                 "implHandler": [
+                    "",
                     "//set default view",
                     "Ext.applyIf(config.view, {",
                     "    projection: 'EPSG:3857',",
